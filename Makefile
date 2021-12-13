@@ -1,6 +1,6 @@
-PROJECT_NAME ?= backendschool2019
+PROJECT_NAME ?= WEB
 VERSION = $(shell python3 setup.py --version | tr '+' '-')
-PROJECT_NAMESPACE ?= alvassin
+PROJECT_NAMESPACE ?= Gorlym
 REGISTRY_IMAGE ?= $(PROJECT_NAMESPACE)/$(PROJECT_NAME)
 
 all:
@@ -18,7 +18,7 @@ clean:
 	rm -fr *.egg-info dist
 
 devenv: clean
-	rm -rf env
+	sudo rm -rf env
 	# создаем новое окружение
 	python3.8 -m venv env
 	# обновляем pip
